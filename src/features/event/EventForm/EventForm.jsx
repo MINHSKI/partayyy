@@ -10,9 +10,21 @@ class EventForm extends Component {
     hostedBy: '',
   };
 
+  componentDidMount = () => {
+    if(this.props.selectedEvent != null) {
+      this.setState({
+        ...this.props.selectedEvent,
+      })
+    }
+  }
+
   handleFormSubmit = e => {
     e.preventDefault();
-    this.props.createEvent(this.state);
+    if(this.state.id) {
+      this.props.updateEvent(this.state);
+    } else {
+      this.props.createEvent(this.state);
+    }
   }
 
   handleChange = ({target: {name, value} }) => {
@@ -72,10 +84,15 @@ class EventForm extends Component {
                     placeholder="Enter the name of person hosting" 
                   />
                 </Form.Field>
-                <Button positive type="submit">
+                <Button 
+                  positive type="submit">
                   Submit
                 </Button>
-                <Button type="button" onClick={cancelFormOpen}>Cancel</Button>
+                <Button 
+                  type="button" 
+                  onClick={cancelFormOpen}>
+                  Cancel
+                </Button>
               </Form>
             </Segment>
     )
