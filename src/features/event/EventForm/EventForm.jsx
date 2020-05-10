@@ -38,58 +38,58 @@ class EventForm extends Component {
     const {title, date, city, venue, hostedBy} = this.state;
     return (
             <Segment>
-              <Form onSubmit={this.handleFormSubmit} autoComplete="off">
+              <Form onSubmit={this.handleFormSubmit} autoComplete='off'>
                 <Form.Field>
                   <label>Event Title</label>
                   <input 
-                    name="title"
+                    name='title'
                     onChange={this.handleChange}
                     value={title}
-                    placeholder="Title" 
+                    placeholder='Title' 
                   />
                 </Form.Field>
                 <Form.Field>
                   <label>Event Date</label>
                   <input 
-                    name="date"
+                    name='date'
                     onChange={this.handleChange}
                     value={date}
-                    type="date" placeholder="Event Date" 
+                    type='date' placeholder='Event Date' 
                   />
                 </Form.Field>
                 <Form.Field>
                   <label>City</label>
                   <input 
-                    name="city"
+                    name='city'
                     onChange={this.handleChange}
                     value={city}
-                    placeholder="City event is taking place" 
+                    placeholder='City event is taking place' 
                   />
                 </Form.Field>
                 <Form.Field>
                   <label>Venue</label>
                   <input 
-                    name="venue"
+                    name='venue'
                     onChange={this.handleChange}
                     value={venue}
-                    placeholder="Enter the Venue of the event" 
+                    placeholder='Enter the Venue of the event' 
                   />
                 </Form.Field>
                 <Form.Field>
                   <label>Hosted By</label>
                   <input 
-                    name="hostedBy"
+                    name='hostedBy'
                     onChange={this.handleChange}
                     value={hostedBy}
-                    placeholder="Enter the name of person hosting" 
+                    placeholder='Enter the name of person hosting' 
                   />
                 </Form.Field>
                 <Button 
-                  positive type="submit">
+                  positive type='submit'>
                   Submit
                 </Button>
                 <Button 
-                  type="button" 
+                  type='button' 
                   onClick={cancelFormOpen}>
                   Cancel
                 </Button>

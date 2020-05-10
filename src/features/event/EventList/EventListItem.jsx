@@ -23,8 +23,8 @@ class EventListItem extends Component {
               </Segment>
               <Segment>
                 <span>
-                  <Icon name="clock" /> {event.date} |
-                  <Icon name="marker" /> {event.venue}
+                  <Icon name='clock' /> {event.date} |
+                  <Icon name='marker' /> {event.venue}
                 </span>
               </Segment>
               <Segment secondary>
@@ -38,17 +38,17 @@ class EventListItem extends Component {
                 <span>{event.description}</span>
                 <Button 
                   onClick={() => deleteEvent(event.id)} 
-                  as="a" 
-                  color="red" 
-                  floated="right" 
-                  content="Delete"
+                  as='a' 
+                  color='red' 
+                  floated='right' 
+                  content='Delete'
                 />
                 <Button 
                   onClick={(evt) => selectEvent(evt, event)} 
-                  as="a" 
-                  color="teal" 
-                  floated="right" 
-                  content="View"
+                  as='a' 
+                  color='teal' 
+                  floated='right' 
+                  content='View'
                 />
               </Segment>
             </Segment.Group>
